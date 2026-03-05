@@ -98,7 +98,7 @@
     .topbar-brand span { display: none; }
     .topbar-actions { gap: 4px; }
     .topbar-actions .badge { display: none; }
-    .btn { padding: 8px 10px; font-size: 12px; }
+    .topbar-btn { padding: 8px 10px; font-size: 12px; }
     .project-bar { padding: 6px 12px; }
     .project-bar label { display: none; }
     .modal { width: 95%; max-height: 90vh; }
@@ -114,11 +114,9 @@
     .topbar-brand .icon { width: 28px; height: 28px; font-size: 12px; border-radius: 6px; }
     .topbar-brand h1 { font-size: 14px; }
     .topbar-brand span { display: none; }
-    .topbar-actions { gap: 3px; }
+    .topbar-actions { gap: 4px; }
     .topbar-actions .badge { display: none; }
-    .btn { padding: 6px 8px; font-size: 11px; gap: 3px; border-radius: 6px; }
-    #syncBtn { padding: 6px 6px; font-size: 11px; }
-    #syncBtn .btn-text { display: none; }
+    .topbar-btn { padding: 7px 10px; font-size: 12px; }
     #syncStatus { font-size: 12px; }
     .theme-toggle { width: 32px; height: 32px; font-size: 14px; border-radius: 6px; }
 
@@ -245,6 +243,12 @@
   .topbar-brand h1 { font-size: 16px; font-weight: 700; letter-spacing: 0.5px; }
   .topbar-brand span { font-size: 11px; color: var(--text-muted); font-weight: 500; text-transform: uppercase; letter-spacing: 1.5px; }
   .topbar-actions { display: flex; gap: 8px; align-items: center; }
+  .topbar-btn {
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
   .btn {
     display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px;
     border-radius: 8px; font-family: 'DM Sans', sans-serif; font-size: 13px;
@@ -710,9 +714,9 @@
   </div>
   <div class="topbar-actions">
     <span class="badge" id="countBadge">0 manholes</span>
-    <button type="button" class="btn" onclick="openImport()">⬆ Import CSV</button>
-    <button type="button" class="btn" onclick="exportData()">⬇ Export</button>
-    <button type="button" class="btn" id="syncBtn" onclick="manualSync()" title="Sync with server">🔄 Sync</button>
+    <button type="button" class="btn topbar-btn" onclick="openImport()">Import</button>
+    <button type="button" class="btn topbar-btn" onclick="exportData()">Export</button>
+    <button type="button" class="btn topbar-btn" id="syncBtn" onclick="manualSync()" title="Sync with server">Sync</button>
     <span id="syncStatus" title="Sync status" style="font-size:14px;cursor:help">⚫</span>
     <button type="button" class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle light/dark mode">☀️</button>
   </div>
